@@ -1,0 +1,17 @@
+@html.extend('layout', function () {
+  @html.append('content', function () {
+    <h1>Submit a website</h1>
+    <p>Please submit your website in the Google Form below</p>
+    <p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdB9JwV5FBpqT_Va99e0SFTX_vrLMsC81sNZo25CZmKhSIPaA/viewform">
+        https://docs.google.com/forms/d/e/1FAIpQLSdB9JwV5FBpqT_Va99e0SFTX_vrLMsC81sNZo25CZmKhSIPaA/viewform
+      </a>
+    </p>
+    <p>Currently websites are added manually, which means that it might take days or weeks for it to be added to the webring.</p>
+    <p>You will receive an email once it's added. Don't forget to add the webring widget to your website once it's in the webring.</p>
+    <br>
+    <br>
+
+    <a href="/">Back to HOME</a>
+  })
+})

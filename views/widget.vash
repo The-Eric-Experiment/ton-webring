@@ -1,0 +1,41 @@
+@html.extend('layout', function () {
+  @html.append('content', function () {
+    <h1>Generate TheOldNet Webring Widget</h1>
+    <form action="/widget" method="POST">
+      Website Id (from email):
+      <br>
+      <input type="text" name="websiteId" value="@model.websiteId">
+      <br><br>
+      Widget Type:
+      <select name="widgetType">
+        <option>Image</option>
+        <option>Text</option>
+      </select>
+      <br>
+      <br>
+      <input type="submit" value="Generate widget!">
+    </form>
+
+    @if (model.error) {
+      <hr/>
+      <font size="5" color="red">@model.error</font>
+      <hr/>
+    }
+
+    @if (model.generatedWidget) {
+      <hr/>
+      <h2>TheOldNet Webring Widget for @model.website.name</h2>
+      <p>Copy this code and paste it on your website</p>
+      <textarea cols="130" rows="10">
+        @model.generatedWidget
+      </textarea>
+      <br>
+      <p>This is what the widget is going to look like:</p>
+      @html.raw(model.generatedWidget)
+      <hr/>
+    }
+
+    <br>
+    <a href="/">Back to HOME</a>
+  })
+})

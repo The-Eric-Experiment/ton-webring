@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>TheOldNet - Webring!</title>
+  </head>
+  <body>
+    <center>
+      <p>
+        <font size="6" color="blue">Welcome</font>
+        <font size="6" color="red">To</font>
+        <font size="6" color="orange">TheOldNet</font>
+        <font size="6" color="green">WebRing!</font>
+      </p>
+      <img src="/assets/webring.gif">
+    </center>
+
+    @html.block('content', function () {})
+  </body>
+</html>

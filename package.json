@@ -1,0 +1,28 @@
+{
+  "name": "theoldnet-webring",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev ./src/server.ts",
+    "dev": "ts-node-dev --respawn ./src/server.ts",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "rimraf": "^3.0.2",
+    "vash": "^0.13.0",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.13",
+    "@types/node-fetch": "^2.5.7",
+    "@types/yaml": "^1.9.7",
+    "ts-node-dev": "^1.0.0-pre.48",
+    "typescript": "^3.9.5"
+  }
+}
