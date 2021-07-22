@@ -8,6 +8,8 @@
       <br><br>
       Widget Type:
       <select name="widgetType">
+        <option>Banner Exchange</option>
+        <option>Iframe</option>
         <option>Image</option>
         <option>Text</option>
       </select>
