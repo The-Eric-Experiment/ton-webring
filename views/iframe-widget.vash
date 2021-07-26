@@ -1,0 +1,13 @@
+<html>
+<body marginheight="0" topmargin="0" vspace="0" marginwidth="0" leftmargin="0" hspace="0" style="margin:0; padding:0">
+<center>
+  <a href="@model.website.url"><img src="@model.website.banner" alt="@model.website.name" border="0"></a><br>
+  <font size="-1">
+    Proud member of <a href="http://www.theoldnet.com"><b>TheOldNet</b></a> webring! Check some other cool websites!<br>
+    [<a href="/@model.current.id/previous/navigate">Previous site</a>] -
+    [<a href="/@model.current.id/random/navigate">Random site</a>] -
+    [<a href="/@model.current.id/next/navigate">Next site</a>]
+  </font>
+</center>
+</body>
+</html>

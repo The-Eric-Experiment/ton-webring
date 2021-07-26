@@ -1,5 +1,6 @@
-import * as express from "express";
+import axios from "axios";
 import * as bodyParser from "body-parser";
+import * as express from "express";
 import {
   getNextWebsite,
   getPreviousWebsite,
@@ -9,9 +10,10 @@ import {
 } from "./db";
 import { WidgetCreationRequest } from "./types";
 import { generateWidget } from "./widget";
+import { getCachedWidgetData, updateCacheForSite } from "./widget-cache";
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3001;
 
 app.use(bodyParser.urlencoded());
 app.set("view engine", "vash");
@@ -52,6 +54,56 @@ app.get("/:website/random", (req, res) => {
   const website = req.params.website;
   const random = getRandomWebsite(website);
   res.send(random);
+});
+
+app.get("/widget/:website/navigate", (req, res) => {
+  // This one doesn't update the cache because we don't
+  // want the scenario where the user sees a banner and when
+  // they click, it navigates to a different website.
+  const id = req.params.website;
+  const current = getWebsite(id);
+
+  const target = getCachedWidgetData(current);
+  const website = getWebsite(target.targetWebsiteId);
+  res.redirect(website.url);
+});
+
+// This is very rough, we should improve how we send the image
+app.get("/widget/:website/image", async (req, res) => {
+  const id = req.params.website;
+  const current = getWebsite(id);
+  updateCacheForSite(current);
+
+  const target = getCachedWidgetData(current);
+  const website = getWebsite(target.targetWebsiteId);
+
+  if (!website.banner) {
+    res.sendStatus(404);
+    return;
+  }
+
+  try {
+    const response = await axios.get(website.banner, {
+      responseType: "arraybuffer",
+    });
+
+    // TODO: This has to be dynamic
+    res.type("gif");
+    res.send(response.data);
+  } catch (ex) {
+    console.log("Got error: " + ex.message, ex);
+  }
+});
+
+app.get("/:website/widget", (req, res) => {
+  const id = req.params.website;
+  const current = getWebsite(id);
+  updateCacheForSite(current);
+
+  const target = getCachedWidgetData(current);
+  const website = getWebsite(target.targetWebsiteId);
+
+  res.render("iframe-widget", { website, current });
 });
 
 app.get("/random", (_, res) => {
@@ -130,6 +182,6 @@ app.get("/", (_, res) => {
   res.render("home", { randomSites, arrows });
 });
 
-app.listen(port, () =>
+app.listen(port, "0.0.0.0", () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
