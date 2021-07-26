@@ -10,8 +10,10 @@
     <p>Currently websites are added manually, which means that it might take days or weeks for it to be added to the webring.</p>
     <p>You will receive an email once it's added. Don't forget to add the webring widget to your website once it's in the webring.</p>
     <br>
+    <iframe width="100%" height="500" src="https://docs.google.com/forms/d/e/1FAIpQLSdB9JwV5FBpqT_Va99e0SFTX_vrLMsC81sNZo25CZmKhSIPaA/viewform">
+    </iframe>
     <br>
-
+    <br>
     <a href="/">Back to HOME</a>
   })
 })

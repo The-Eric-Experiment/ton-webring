@@ -5,14 +5,6 @@
       Website Id (from email):
       <br>
       <input type="text" name="websiteId" value="@model.websiteId">
-      <br><br>
-      Widget Type:
-      <select name="widgetType">
-        <option>Banner Exchange</option>
-        <option>Iframe</option>
-        <option>Image</option>
-        <option>Text</option>
-      </select>
       <br>
       <br>
       <input type="submit" value="Generate widget!">
