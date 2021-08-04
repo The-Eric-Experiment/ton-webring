@@ -6,12 +6,6 @@ export type Website = {
   description: string;
 };
 
-export enum WidgetType {
-  Image = "image",
-  Text = "text",
-}
-
 export type WidgetCreationRequest = {
   websiteId: string;
-  widgetType: WidgetType;
 };
