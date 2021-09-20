@@ -7,5 +7,5 @@ export function getHost() {
     return "http://www.theoldnet.com";
   }
 
-  return "";
+  return "http://localhost:3010";
 }

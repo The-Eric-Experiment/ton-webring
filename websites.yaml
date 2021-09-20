@@ -1,55 +1,37 @@
 - id: blah1
-  name: The Eric Experiment 1
+  name: The Eric Experiment
   url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  banner: /assets/banners/banner-theericexperiment.gif
+  description: The Eric Experiment is a website about retro gaming, retro computing and other cool things. 
 - id: blah2
-  name: The Eric Experiment 2
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: The Old Net
+  url: http://theoldnet.com
+  banner: /assets/banners/banner-theoldnet.gif
+  description: Vintage Internet for Retro Computers
 - id: blah3
-  name: The Eric Experiment 3
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: MiniCromp Official Site
+  url: http://minicromp.rf.gd
+  banner: /assets/banners/banner-minicromp.gif
+  description: A satirical website based on the software sites of the 90s. We really do make software though. 
 - id: blah4
-  name: The Eric Experiment 4
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: theGRG1999
+  url: http://thegrg1999.epizy.com/
+  banner: /assets/banners/banner-thegrg1999.jpg
+  description: A collection of Treasures from the 1990s.
 - id: blah5
-  name: The Eric Experiment 5
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: Ol'Twitter
+  url: https://oltwitter.herokuapp.com/
+  banner: /assets/banners/banner-oltwitter.png
+  description: a twitter client which uses twitter UI from circa 2011, only text tweets
 - id: blah6
-  name: The Eric Experiment 6
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: Rings around the Internet!
+  url: https://fanlistings.nickifaulk.com/webrings/
+  banner: /assets/banners/banner-fanlistings.gif
+  description: This is my fan site dedicated to these virtual cool kids clubs from way back when. Join if you had one and/or you're a fan of webrings!
 - id: blah7
-  name: The Eric Experiment 7
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
-- id: blah8
-  name: The Eric Experiment 8
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
-- id: blah9
-  name: The Eric Experiment 9
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
-- id: blah10
-  name: The Eric Experiment 10
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
-- id: blah11
-  name: The Eric Experiment 11
-  url: http://www.ericexperiment.com
-  banner: http://www.ericexperiment.com/contents/public/banner.gif
-  description: This is a cool website and all
+  name: Vweb
+  url: https://vweb.neocities.org
+  banner: /assets/banners/banner-vweb.png
+  description: links and stuff
+    
+

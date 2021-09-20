@@ -159,11 +159,15 @@ app.get("/widget/:website/image", async (req, res) => {
   }
 
   try {
-    const response = await axios.get(website.banner, {
+    console.log(website.banner)
+    //don't do this anymore because images are hosted locally, so now I'm making an axios call to myself
+    //just serve the image off disk
+    const url = 'http://localhost:3001' + website.banner;
+    const response = await axios.get(url, {
       responseType: "arraybuffer",
     });
 
-    // TODO: This has to be dynamic
+    // TODO: This has to be dynamic or only support gifs. Some banner submissions were png which will be no good for retro support
     res.type("gif");
     res.send(response.data);
   } catch (ex) {
