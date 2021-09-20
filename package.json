@@ -8,7 +8,8 @@
     "dev": "ENVIRONMENT=development ts-node-dev --respawn ./src/server.ts",
     "tsc": "tsc",
     "build": "rimraf dist/ && yarn tsc",
-    "start:prod": "ENVIRONMENT=production node ./dist/server.js"
+    "start:prod": "ENVIRONMENT=production node ./dist/server.js",
+    "start:prod2": "ENVIRONMENT=production ts-node-dev ./src/server.ts"
   },
   "dependencies": {
     "axios": "^0.21.1",
