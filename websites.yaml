@@ -8,11 +8,6 @@
   url: http://theoldnet.com
   banner: /assets/banners/banner-theoldnet.gif
   description: Vintage Internet for Retro Computers
-- id: blah3
-  name: MiniCromp Official Site
-  url: http://minicromp.rf.gd
-  banner: /assets/banners/banner-minicromp.gif
-  description: A satirical website based on the software sites of the 90s. We really do make software though. 
 - id: blah4
   name: theGRG1999
   url: http://thegrg1999.epizy.com/
