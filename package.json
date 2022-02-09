@@ -9,7 +9,8 @@
     "tsc": "tsc",
     "build": "rimraf dist/ && yarn tsc",
     "start:prod": "ENVIRONMENT=production node ./dist/server.js",
-    "start:prod2": "ENVIRONMENT=production ts-node-dev ./src/server.ts"
+    "start:prod2": "ENVIRONMENT=production ts-node-dev ./src/server.ts",
+    "deploy": "git pull && yarn build && pm2 restart server"
   },
   "dependencies": {
     "axios": "^0.21.1",
